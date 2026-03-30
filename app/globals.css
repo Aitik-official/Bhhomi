@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-textPrimary font-sans;
+  background-image:
+    radial-gradient(circle at top left, rgba(255, 140, 56, 0.12), transparent 24%),
+    radial-gradient(circle at 85% 10%, rgba(255, 107, 0, 0.08), transparent 18%),
+    linear-gradient(180deg, #ffffff 0%, #fffdfb 100%);
+}
+
+* {
+  @apply border-border;
+}
+
+::selection {
+  @apply bg-primary text-white;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-spacing {
+  @apply py-16 sm:py-20 lg:py-24;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ff6b00 0%, #cc5500 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-panel {
+  @apply border border-white/60 bg-white/85 backdrop-blur;
+}
+
+.input-field {
+  @apply h-14 w-full rounded-2xl border border-border bg-white px-4 pt-5 text-sm text-textPrimary outline-none transition duration-300 placeholder:text-transparent focus:border-primary focus:ring-4 focus:ring-primary/10;
+}
+
+.floating-label {
+  @apply pointer-events-none absolute left-4 top-4 origin-left text-sm text-textSecondary transition-all duration-300;
+}
+
+.input-peer:focus ~ .floating-label,
+.input-peer:not(:placeholder-shown) ~ .floating-label {
+  @apply top-2 scale-90 text-xs text-primary;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255, 107, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 107, 0, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
