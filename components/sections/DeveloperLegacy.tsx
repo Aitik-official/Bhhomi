@@ -8,6 +8,8 @@ import { AREA_BADGES, LEGACY_GALLERY, LEGACY_PROJECTS } from "@/lib/constants";
 import { fadeInUp } from "@/lib/animations";
 
 export function DeveloperLegacy({ standalone = false }: { standalone?: boolean }) {
+  const galleryItems = LEGACY_GALLERY.slice(1);
+
   return (
     <section id="legacy" className="section-spacing bg-white">
       <div className="container-shell space-y-14">
@@ -123,7 +125,7 @@ export function DeveloperLegacy({ standalone = false }: { standalone?: boolean }
         </motion.div>
 
         <div className="grid gap-6 lg:grid-cols-3">
-          {LEGACY_GALLERY.map((item, index) => (
+          {galleryItems.map((item, index) => (
             <motion.article
               key={item.title}
               initial={{ opacity: 0, y: 30 }}

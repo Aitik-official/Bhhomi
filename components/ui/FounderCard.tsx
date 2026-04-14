@@ -22,7 +22,7 @@ export function FounderCard({ founder, index }: { founder: Founder; index: numbe
           alt={founder.name}
           width={600}
           height={700}
-          className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
+          className="h-96 w-full object-cover transition duration-500 group-hover:scale-105"
         />
       </div>
       <div className="px-2 pb-2 pt-5">

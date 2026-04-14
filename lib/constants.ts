@@ -33,14 +33,12 @@ export const FOUNDERS: Founder[] = [
   {
     name: "Vinay Dubey",
     title: "Co-Founder & Director",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
+    image: "/Aitik%20Portfolio.png",
   },
   {
     name: "Dilip Mishra",
     title: "Co-Founder & Director",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
+    image: "/WhatsApp%20Image%202026-04-09%20at%204.11.02%20PM.jpeg",
   },
 ];
 
@@ -74,24 +72,85 @@ export const AREA_BADGES = [
   "Upper Kharghar",
 ];
 
+const BUILDING_IMAGE_NAMES = [
+  "page_1-removebg-preview (1).png",
+  "WhatsApp Image 2026-03-26 at 3.19.46 PM (1).jpeg",
+  "WhatsApp Image 2026-03-26 at 3.19.46 PM (2).jpeg",
+  "WhatsApp Image 2026-03-26 at 3.19.46 PM.jpeg",
+  "WhatsApp Image 2026-03-26 at 3.19.47 PM (1).jpeg",
+  "WhatsApp Image 2026-03-26 at 3.19.47 PM (2).jpeg",
+  "WhatsApp Image 2026-03-26 at 3.19.47 PM (3).jpeg",
+  "WhatsApp Image 2026-03-26 at 3.19.47 PM.jpeg",
+  "WhatsApp Image 2026-03-26 at 3.19.48 PM.jpeg",
+  "WhatsApp Image 2026-03-26 at 3.19.49 PM (1).jpeg",
+  "WhatsApp Image 2026-03-26 at 3.19.49 PM (2).jpeg",
+  "WhatsApp Image 2026-03-26 at 3.19.49 PM.jpeg",
+] as const;
+
+const BUILDING_IMAGES = BUILDING_IMAGE_NAMES.map(
+  (name) => `/bulding/${encodeURIComponent(name)}`,
+);
+
 export const LEGACY_GALLERY: GalleryItem[] = [
   {
-    title: "Completed Residential Communities",
-    image:
-      "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1400&q=80",
-    caption: "High-resolution project photography reflecting delivered homes and established neighborhood presence.",
+    title: "Legacy Project Visual - 01",
+    image: BUILDING_IMAGES[0],
+    caption: "Project imagery from the Bhoomii Buildcon legacy portfolio.",
   },
   {
-    title: "Ongoing Project Progress",
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80",
-    caption: "Execution-focused visuals from active construction zones across emerging Navi Mumbai locations.",
+    title: "Legacy Project Visual - 02",
+    image: BUILDING_IMAGES[1],
+    caption: "On-site elevation and frontage view from completed developments.",
   },
   {
-    title: "3D Renders & Elevation Visuals",
-    image:
-      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80",
-    caption: "Architectural elevation-led imagery representing the premium residential vision ahead.",
+    title: "Legacy Project Visual - 03",
+    image: BUILDING_IMAGES[2],
+    caption: "Built-form reference showing layout and surrounding context.",
+  },
+  {
+    title: "Legacy Project Visual - 04",
+    image: BUILDING_IMAGES[3],
+    caption: "Project capture highlighting structure and finishing details.",
+  },
+  {
+    title: "Legacy Project Visual - 05",
+    image: BUILDING_IMAGES[4],
+    caption: "Portfolio frame from Bhoomii project documentation.",
+  },
+  {
+    title: "Legacy Project Visual - 06",
+    image: BUILDING_IMAGES[5],
+    caption: "Development image with an emphasis on site character.",
+  },
+  {
+    title: "Legacy Project Visual - 07",
+    image: BUILDING_IMAGES[6],
+    caption: "Residential view from legacy and growth-phase assets.",
+  },
+  {
+    title: "Legacy Project Visual - 08",
+    image: BUILDING_IMAGES[7],
+    caption: "Photographic record from project progression milestones.",
+  },
+  {
+    title: "Legacy Project Visual - 09",
+    image: BUILDING_IMAGES[8],
+    caption: "Real image set curated from the provided building folder.",
+  },
+  {
+    title: "Legacy Project Visual - 10",
+    image: BUILDING_IMAGES[9],
+    caption: "Architectural perspective from the Bhoomii image archive.",
+  },
+  {
+    title: "Legacy Project Visual - 11",
+    image: BUILDING_IMAGES[10],
+    caption: "Development photography for trust and on-ground authenticity.",
+  },
+  {
+    title: "Legacy Project Visual - 12",
+    image: BUILDING_IMAGES[11],
+    caption: "Final image in the complete legacy showcase sequence.",
   },
 ];
 
@@ -115,22 +174,19 @@ export const FEATURED_HIGHLIGHTS: Highlight[] = [
 
 export const FEATURED_GALLERY: GalleryItem[] = [
   {
-    title: "Tower Elevation",
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80",
-    caption: "Bold vertical expression with a refined modern facade.",
+    title: "Bhoomii Anant View - 01",
+    image: BUILDING_IMAGES[9],
+    caption: "Featured project image from provided Bhoomii assets.",
   },
   {
-    title: "Lobby Interior",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-    caption: "Warm materials, generous volume, and a premium welcome sequence.",
+    title: "Bhoomii Anant View - 02",
+    image: BUILDING_IMAGES[10],
+    caption: "Detailed view representing project form and finish quality.",
   },
   {
-    title: "Aerial View",
-    image:
-      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1400&q=80",
-    caption: "Thoughtfully arranged towers, circulation, and open breathing space.",
+    title: "Bhoomii Anant View - 03",
+    image: BUILDING_IMAGES[11],
+    caption: "Context image from the same building image collection.",
   },
 ];
 
@@ -174,7 +230,7 @@ export const SPECS: Spec[] = [
   {
     icon: "arrow-up-wide-narrow",
     title: "Lift",
-    description: "High-speed KONE automatic lift for smooth vertical mobility.",
+    description: "High-speed automatic lift for smooth vertical mobility.",
   },
 ];
 
@@ -195,7 +251,10 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const CONTACT_INFO: ContactInfo = {
   phone: "+91 98765 43210",
-  email: "sales@shreebhoomiibuildcon.com",
+  emails: [
+    "crm@bhoomiibuilcon.co.in",
+    "sales@bhoomiibhuildcon.co.in",
+  ],
   address:
     "Corporate Office, Navi Mumbai, Maharashtra 410210",
 };

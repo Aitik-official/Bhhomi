@@ -25,7 +25,7 @@ export interface Founder {
 
 export interface ContactInfo {
   phone: string;
-  email: string;
+  emails: string[];
   address: string;
 }
 

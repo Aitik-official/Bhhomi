@@ -66,7 +66,17 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
               <div className="rounded-3xl border border-border bg-offWhite p-6 shadow-soft">
                 <Mail className="h-6 w-6 text-primary" />
                 <h3 className="mt-4 font-serif text-2xl font-bold text-textPrimary">Email</h3>
-                <p className="mt-2 text-base text-textSecondary">{CONTACT_INFO.email}</p>
+                <div className="mt-2 space-y-1">
+                  {CONTACT_INFO.emails.map((email) => (
+                    <a
+                      key={email}
+                      href={`mailto:${email}`}
+                      className="block text-base text-textSecondary transition hover:text-primary"
+                    >
+                      {email}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
