@@ -21,7 +21,7 @@ export function FeaturedProject({ standalone = false }: { standalone?: boolean }
       <div className="container-shell space-y-14">
         <SectionHeading
           eyebrow="Featured project"
-          title="Bhoomii Anant — Upper Kharghar"
+          title="Bhoomii Anant - Upper Kharghar"
           description="Twin Residential Towers Redefining Modern Living"
         />
 
@@ -44,8 +44,8 @@ export function FeaturedProject({ standalone = false }: { standalone?: boolean }
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.55, delay: index * 0.12 }}
-                whileHover={{ y: -6 }}
-                className="rounded-3xl border border-border bg-white p-6 shadow-soft"
+                whileHover={{ y: -3 }}
+                className="rounded-2xl border border-border bg-card p-6 shadow-soft"
               >
                 <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                   <Icon className="h-6 w-6" />
@@ -74,7 +74,7 @@ export function FeaturedProject({ standalone = false }: { standalone?: boolean }
                 height={700}
                 className="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-textPrimary/85 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 translate-y-6 bg-primary/95 p-6 text-white opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                 <h3 className="font-serif text-2xl font-bold">{item.title}</h3>
                 <p className="mt-2 text-sm leading-7 text-white/85">{item.caption}</p>
@@ -102,3 +102,5 @@ export function FeaturedProject({ standalone = false }: { standalone?: boolean }
     </section>
   );
 }
+
+

@@ -6,7 +6,7 @@ import { SPECS } from "@/lib/constants";
 
 export function Specifications() {
   return (
-    <section id="specifications" className="section-spacing bg-white">
+    <section id="specifications" className="section-spacing bg-offWhite">
       <div className="container-shell space-y-12">
         <SectionHeading
           eyebrow="Specifications"

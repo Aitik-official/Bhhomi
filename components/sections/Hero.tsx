@@ -9,7 +9,7 @@ import { HERO_BADGES } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-offWhite via-white to-white">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-offWhite to-white">
       <div className="hero-grid absolute inset-0 opacity-40" />
       <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute right-0 top-16 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
@@ -60,7 +60,7 @@ export function Hero() {
           className="relative"
         >
           <div className="absolute -right-4 -top-4 h-full w-full rounded-[2rem] border-2 border-primary/20 bg-primary/5" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white p-4 shadow-soft">
+          <div className="metallic-overlay relative overflow-hidden rounded-[2rem] border border-border bg-card p-4 shadow-soft">
             <Image
               src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80"
               alt="Shree Bhoomii Buildcon project showcase"
@@ -74,7 +74,7 @@ export function Hero() {
           <motion.div
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-            className="glass-panel absolute -left-4 top-10 rounded-2xl px-4 py-3 shadow-soft"
+            className="glass-panel absolute -left-4 top-10 rounded-2xl border-white/80 px-4 py-3 shadow-soft"
           >
             <p className="text-xs uppercase tracking-[0.24em] text-primary">RERA Registered</p>
             <p className="mt-1 font-serif text-2xl font-bold text-textPrimary">Premium Trust</p>
@@ -83,7 +83,7 @@ export function Hero() {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5.2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-            className="glass-panel absolute -bottom-4 right-6 rounded-2xl px-4 py-3 shadow-soft"
+            className="glass-panel absolute -bottom-4 right-6 rounded-2xl border-white/80 px-4 py-3 shadow-soft"
           >
             <p className="text-xs uppercase tracking-[0.24em] text-primary">20+ Years</p>
             <p className="mt-1 font-serif text-2xl font-bold text-textPrimary">Legacy Built</p>
@@ -93,7 +93,7 @@ export function Hero() {
             {HERO_BADGES.map((badge) => (
               <span
                 key={badge}
-                className="rounded-full border border-white/60 bg-white/90 px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-textPrimary shadow-soft"
+                className="rounded-full border border-border bg-card px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-textPrimary shadow-soft"
               >
                 {badge}
               </span>

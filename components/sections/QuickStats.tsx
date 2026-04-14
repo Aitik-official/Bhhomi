@@ -7,16 +7,16 @@ import { fadeInUp } from "@/lib/animations";
 
 export function QuickStats() {
   return (
-    <section className="bg-primary-gradient py-14">
+    <section className="metallic-overlay bg-primary-gradient py-14">
       <div className="container-shell">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeInUp}
-          className="mb-10 max-w-2xl text-white"
+          className="mb-10 max-w-2xl text-textPrimary"
         >
-          <p className="text-xs uppercase tracking-[0.35em] text-white/75">Scale & trust</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-textSecondary">Scale & trust</p>
           <h2 className="mt-4 font-serif text-[clamp(2rem,4vw,3.4rem)] font-bold">
             A strong development footprint shaped by experience.
           </h2>

@@ -25,7 +25,7 @@ export function MasterLayout() {
           className="relative"
         >
           <div className="absolute -bottom-5 -right-5 h-full w-full rounded-[2rem] border-2 border-primary/20 bg-primary/5" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-border bg-white p-4 shadow-soft">
+          <div className="metallic-overlay relative overflow-hidden rounded-[2rem] border border-border bg-card p-4 shadow-soft">
             <Image
               src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80"
               alt="Master layout plan for Bhoomii Anant"

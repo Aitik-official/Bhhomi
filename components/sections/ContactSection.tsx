@@ -40,7 +40,7 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
   };
 
   return (
-    <section id="contact" className="section-spacing bg-white">
+    <section id="contact" className="section-spacing bg-offWhite">
       <div className="container-shell space-y-12">
         <SectionHeading
           eyebrow="Contact"
@@ -58,12 +58,12 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
             className="space-y-6"
           >
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border border-border bg-offWhite p-6 shadow-soft">
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
                 <Phone className="h-6 w-6 text-primary" />
                 <h3 className="mt-4 font-serif text-2xl font-bold text-textPrimary">Call us</h3>
                 <p className="mt-2 text-base text-textSecondary">{CONTACT_INFO.phone}</p>
               </div>
-              <div className="rounded-3xl border border-border bg-offWhite p-6 shadow-soft">
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
                 <Mail className="h-6 w-6 text-primary" />
                 <h3 className="mt-4 font-serif text-2xl font-bold text-textPrimary">Email</h3>
                 <div className="mt-2 space-y-1">
@@ -80,7 +80,7 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
               </div>
             </div>
 
-            <div className="rounded-3xl border border-border bg-offWhite p-6 shadow-soft">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
               <MapPin className="h-6 w-6 text-primary" />
               <h3 className="mt-4 font-serif text-2xl font-bold text-textPrimary">
                 Visit our office
@@ -100,7 +100,7 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
             </div>
 
             <div className="overflow-hidden rounded-[2rem] border border-border shadow-soft">
-              <div className="flex h-[320px] items-center justify-center bg-offWhite text-center">
+              <div className="flex h-[320px] items-center justify-center bg-card text-center">
                 <div className="space-y-3 px-6">
                   <MapPin className="mx-auto h-8 w-8 text-primary" />
                   <h3 className="font-serif text-2xl font-bold text-textPrimary">
@@ -120,7 +120,7 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUp}
-            className="rounded-[2rem] border border-border bg-offWhite p-6 shadow-soft sm:p-8"
+            className="rounded-[2rem] border border-border bg-card p-6 shadow-soft sm:p-8"
           >
             <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
               <div className="relative">
@@ -217,7 +217,7 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
                     className="flex items-center gap-2 rounded-full bg-success/10 px-4 py-2 text-sm font-semibold text-success"
                   >
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-success text-white">
-                      ✓
+                      OK
                     </span>
                     Thank you! We&apos;ll get back to you shortly.
                   </motion.div>
@@ -230,3 +230,5 @@ export function ContactSection({ standalone = false }: { standalone?: boolean })
     </section>
   );
 }
+
+

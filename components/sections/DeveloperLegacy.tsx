@@ -27,7 +27,7 @@ export function DeveloperLegacy({ standalone = false }: { standalone?: boolean }
             variants={fadeInUp}
             className="grid gap-6 rounded-[2rem] border border-border bg-offWhite p-8 shadow-soft lg:grid-cols-3"
           >
-            <div className="rounded-3xl bg-white p-6 shadow-soft">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
                 Delivered Projects
               </p>
@@ -36,7 +36,7 @@ export function DeveloperLegacy({ standalone = false }: { standalone?: boolean }
                 Across Nerul, Vashi, Ulwe, and Taloja Phase 2.
               </p>
             </div>
-            <div className="rounded-3xl bg-white p-6 shadow-soft">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
                 Ongoing Projects
               </p>
@@ -45,7 +45,7 @@ export function DeveloperLegacy({ standalone = false }: { standalone?: boolean }
                 Active developments in Karanjade, Upper Kharghar, and Ulwe.
               </p>
             </div>
-            <div className="rounded-3xl bg-white p-6 shadow-soft">
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
                 Upcoming Projects
               </p>
@@ -64,7 +64,7 @@ export function DeveloperLegacy({ standalone = false }: { standalone?: boolean }
                 <motion.path
                   d="M40 60 C 220 60, 280 60, 500 60 S 780 60, 960 60"
                   fill="none"
-                  stroke="#FF6B00"
+                  stroke="#B76E79"
                   strokeWidth="3"
                   strokeLinecap="round"
                   initial={{ pathLength: 0 }}
@@ -76,7 +76,7 @@ export function DeveloperLegacy({ standalone = false }: { standalone?: boolean }
               <div className="grid gap-6 lg:grid-cols-3">
                 {LEGACY_PROJECTS.map((project, index) => (
                   <div key={project.title} className="relative pt-10">
-                    <span className="absolute left-1/2 top-4 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-primary shadow-glow" />
+                    <span className="absolute left-1/2 top-4 h-4 w-4 -translate-x-1/2 rounded-full border-4 border-card bg-primary shadow-glow" />
                     <ProjectCard project={project} index={index} />
                   </div>
                 ))}
@@ -141,7 +141,7 @@ export function DeveloperLegacy({ standalone = false }: { standalone?: boolean }
                 height={700}
                 className="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-textPrimary/80 via-textPrimary/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 translate-y-6 bg-primary/95 p-6 text-white opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                 <h3 className="font-serif text-2xl font-bold">{item.title}</h3>
                 <p className="mt-2 text-sm leading-7 text-white/85">{item.caption}</p>

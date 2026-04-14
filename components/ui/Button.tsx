@@ -14,9 +14,9 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-primary-gradient text-white shadow-glow hover:from-primaryLight hover:to-primaryDark",
+    "metallic-overlay bg-primary-gradient text-white shadow-soft hover:-translate-y-0.5 hover:brightness-105 hover:shadow-glow",
   outline:
-    "border border-primary/25 bg-white text-primary hover:border-primary hover:bg-primary/5",
+    "border border-border bg-white text-primary shadow-soft hover:-translate-y-0.5 hover:border-primary/40 hover:bg-primary/5",
   dark: "bg-textPrimary text-white hover:bg-black",
   success: "bg-success text-white hover:bg-emerald-600",
 };
@@ -29,13 +29,13 @@ export function Button({
   type = "button",
   onClick,
 }: ButtonProps) {
-  const baseClassName = `inline-flex min-h-11 items-center justify-center rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition duration-300 ${variants[variant]} ${className}`;
+  const baseClassName = `inline-flex min-h-11 items-center justify-center rounded-2xl px-6 py-3 text-sm font-semibold tracking-wide transition-all duration-300 ease-out ${variants[variant]} ${className}`;
 
   if (href) {
     const isExternal = href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:");
 
     return (
-      <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+      <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.98 }}>
         {isExternal ? (
           <a
             href={href}
@@ -58,7 +58,7 @@ export function Button({
   return (
     <motion.button
       type={type}
-      whileHover={{ y: -2 }}
+      whileHover={{ y: -3 }}
       whileTap={{ scale: 0.98 }}
       className={baseClassName}
       onClick={onClick}

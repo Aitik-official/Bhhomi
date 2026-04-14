@@ -34,14 +34,14 @@ export function StatCard({ stat, index }: { stat: Stat; index: number }) {
       whileInView="visible"
       viewport={{ once: true, amount: 0.35 }}
       transition={{ delay: index * 0.15 }}
-      className="rounded-[28px] border border-white/15 bg-white/10 p-6 text-white backdrop-blur"
+      className="rounded-2xl border border-white/60 bg-white/85 p-6 text-textPrimary shadow-soft backdrop-blur"
     >
-      <div className="mb-5 h-px w-full bg-white/20" />
+      <div className="mb-5 h-px w-full bg-primary/20" />
       <div className="font-serif text-5xl font-bold leading-none">
         {displayValue}
         {stat.suffix ?? ""}
       </div>
-      <p className="mt-4 max-w-[14rem] text-sm uppercase tracking-[0.2em] text-white/80">
+      <p className="mt-4 max-w-[14rem] text-sm uppercase tracking-[0.2em] text-textSecondary">
         {stat.label}
       </p>
     </motion.div>

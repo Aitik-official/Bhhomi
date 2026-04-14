@@ -43,7 +43,7 @@ export function AboutUs({ standalone = false }: { standalone?: boolean }) {
             className="relative"
           >
             <div className="absolute -bottom-5 -left-5 h-full w-full rounded-[2rem] border-2 border-primary/25 bg-primary/5" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-border bg-white p-4 shadow-soft">
+            <div className="metallic-overlay relative overflow-hidden rounded-[2rem] border border-border bg-card p-4 shadow-soft">
               <Image
                 src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80"
                 alt="Shree Bhoomii Buildcon team and developments"
@@ -67,7 +67,7 @@ export function AboutUs({ standalone = false }: { standalone?: boolean }) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.25 }}
-            className="rounded-3xl border-l-4 border-primary bg-white p-7 shadow-soft"
+            className="rounded-2xl border-l-4 border-primary bg-card p-7 shadow-soft"
           >
             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
               <Eye className="h-5 w-5" />
@@ -84,7 +84,7 @@ export function AboutUs({ standalone = false }: { standalone?: boolean }) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.25 }}
-            className="rounded-3xl border-l-4 border-primary bg-white p-7 shadow-soft"
+            className="rounded-2xl border-l-4 border-primary bg-card p-7 shadow-soft"
           >
             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
               <Target className="h-5 w-5" />
@@ -101,3 +101,4 @@ export function AboutUs({ standalone = false }: { standalone?: boolean }) {
     </section>
   );
 }
+

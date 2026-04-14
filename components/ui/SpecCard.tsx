@@ -36,8 +36,8 @@ export function SpecCard({ spec, index }: { spec: Spec; index: number }) {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       transition={{ delay: index * 0.12 }}
-      whileHover={{ y: -6 }}
-      className="rounded-3xl border border-border bg-white p-6 shadow-soft transition duration-300 hover:border-primary/40 hover:shadow-glow"
+      whileHover={{ y: -3 }}
+      className="rounded-2xl border border-border bg-card p-6 shadow-soft transition duration-300 hover:border-primary/40 hover:shadow-glow"
     >
       <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
         <Icon className="h-6 w-6" />
@@ -47,3 +47,5 @@ export function SpecCard({ spec, index }: { spec: Spec; index: number }) {
     </motion.article>
   );
 }
+
+

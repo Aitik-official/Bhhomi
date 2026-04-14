@@ -4,6 +4,19 @@
 
 :root {
   color-scheme: light;
+  --color-black: #1a1a1a;
+  --color-dark: #f7f7f7;
+  --color-card: #ffffff;
+  --color-card-85: rgba(255, 255, 255, 0.85);
+  --color-border: #eaeaea;
+  --color-rose-gold: #b76e79;
+  --color-rose-gold-light: #f3d6d2;
+  --color-rose-gold-dark: #8c4a52;
+  --color-metallic-pink: #d8aeb0;
+  --color-rose-gold-glow: rgba(183, 110, 121, 0.2);
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #555555;
+  --color-text-muted: #888888;
 }
 
 html {
@@ -13,9 +26,9 @@ html {
 body {
   @apply bg-white text-textPrimary font-sans;
   background-image:
-    radial-gradient(circle at top left, rgba(255, 140, 56, 0.12), transparent 24%),
-    radial-gradient(circle at 85% 10%, rgba(255, 107, 0, 0.08), transparent 18%),
-    linear-gradient(180deg, #ffffff 0%, #fffdfb 100%);
+    radial-gradient(circle at top left, rgba(243, 214, 210, 0.42), transparent 34%),
+    radial-gradient(circle at 85% 10%, rgba(183, 110, 121, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
 }
 
 * {
@@ -39,18 +52,24 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #ff6b00 0%, #cc5500 100%);
+  background: linear-gradient(135deg, var(--color-rose-gold-light) 0%, var(--color-metallic-pink) 55%, var(--color-rose-gold-dark) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .glass-panel {
-  @apply border border-white/60 bg-white/85 backdrop-blur;
+  @apply border border-border backdrop-blur;
+  background-color: var(--color-card-85);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .input-field {
-  @apply h-14 w-full rounded-2xl border border-border bg-white px-4 pt-5 text-sm text-textPrimary outline-none transition duration-300 placeholder:text-transparent focus:border-primary focus:ring-4 focus:ring-primary/10;
+  @apply h-14 w-full rounded-2xl border border-border bg-card px-4 pt-5 text-sm text-textPrimary outline-none transition duration-300 placeholder:text-transparent focus:border-primary focus:ring-4;
+}
+
+.input-field:focus {
+  --tw-ring-color: var(--color-rose-gold-glow);
 }
 
 .floating-label {
@@ -64,7 +83,25 @@ body {
 
 .hero-grid {
   background-image:
-    linear-gradient(rgba(255, 107, 0, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 107, 0, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(183, 110, 121, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(183, 110, 121, 0.08) 1px, transparent 1px);
   background-size: 48px 48px;
+}
+
+.metallic-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.metallic-overlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+.metallic-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
 }

@@ -9,14 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#FF6B00",
-        primaryLight: "#FF8C38",
-        primaryDark: "#CC5500",
-        offWhite: "#FFF8F3",
-        lightGrey: "#F5F5F5",
-        textPrimary: "#1A1A1A",
-        textSecondary: "#555555",
-        border: "#E8E8E8",
+        black: "var(--color-black)",
+        dark: "var(--color-dark)",
+        card: "var(--color-card)",
+        border: "var(--color-border)",
+        roseGold: "var(--color-rose-gold)",
+        roseGoldLight: "var(--color-rose-gold-light)",
+        roseGoldDark: "var(--color-rose-gold-dark)",
+        metallicPink: "var(--color-metallic-pink)",
+        primary: "var(--color-rose-gold)",
+        primaryLight: "var(--color-rose-gold-light)",
+        primaryDark: "var(--color-rose-gold-dark)",
+        offWhite: "#f7f7f7",
+        lightGrey: "#f7f7f7",
+        textPrimary: "var(--color-text-primary)",
+        textSecondary: "var(--color-text-secondary)",
+        textMuted: "var(--color-text-muted)",
         success: "#22C55E",
       },
       fontFamily: {
@@ -24,12 +32,14 @@ const config: Config = {
         serif: ["var(--font-playfair)", "serif"],
       },
       boxShadow: {
-        soft: "0 20px 60px rgba(26, 26, 26, 0.08)",
-        glow: "0 16px 40px rgba(255, 107, 0, 0.18)",
+        soft: "0 10px 30px rgba(0, 0, 0, 0.08)",
+        glow: "0 16px 40px var(--color-rose-gold-glow)",
       },
       backgroundImage: {
         "primary-gradient":
-          "linear-gradient(135deg, #FF6B00 0%, #FF8C38 55%, #CC5500 100%)",
+          "linear-gradient(135deg, #F3D6D2 0%, #B76E79 50%, #F3D6D2 100%)",
+        "metallic-reflection":
+          "linear-gradient(120deg, rgba(255,255,255,0.6), rgba(255,255,255,0.1))",
       },
       animation: {
         "slow-spin": "slow-spin 16s linear infinite",

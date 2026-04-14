@@ -26,14 +26,14 @@ export function Navbar() {
     <motion.header
       initial={false}
       animate={{
-        backgroundColor: scrolled ? "rgba(255,255,255,0.92)" : "rgba(255,255,255,0.85)",
-        boxShadow: scrolled ? "0 12px 30px rgba(26,26,26,0.08)" : "0 0 0 rgba(0,0,0,0)",
+        backgroundColor: scrolled ? "rgba(255,255,255,0.92)" : "rgba(255,255,255,0.82)",
+        boxShadow: scrolled ? "0 10px 30px rgba(0,0,0,0.08)" : "0 0 0 rgba(0,0,0,0)",
       }}
-      className="fixed inset-x-0 top-0 z-50 backdrop-blur"
+      className="fixed inset-x-0 top-0 z-50 border-b border-border backdrop-blur"
     >
       <div className="container-shell flex h-20 items-center justify-between gap-4">
         <Link href="/" className="flex min-h-11 items-center gap-3">
-          <div className="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-sm">
+          <div className="overflow-hidden rounded-xl border border-border bg-card shadow-soft">
             <Image
               src="/bhomii logo.png"
               alt={`${COMPANY_NAME} logo`}
@@ -85,7 +85,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-textPrimary lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-card text-textPrimary lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label="Toggle menu"
         >
@@ -110,7 +110,7 @@ export function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 top-20 bg-textPrimary/40 lg:hidden"
+              className="fixed inset-0 top-20 bg-black/20 lg:hidden"
               onClick={() => setOpen(false)}
             />
             <motion.aside
@@ -118,7 +118,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 260, damping: 30 }}
-              className="fixed right-0 top-20 z-50 flex h-[calc(100vh-5rem)] w-full max-w-sm flex-col justify-between border-l border-border bg-white p-6 lg:hidden"
+              className="fixed right-0 top-20 z-50 flex h-[calc(100vh-5rem)] w-full max-w-sm flex-col justify-between border-l border-border bg-card p-6 shadow-soft lg:hidden"
             >
               <div className="space-y-4">
                 {NAV_ITEMS.map((item) => (

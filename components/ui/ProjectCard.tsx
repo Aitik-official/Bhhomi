@@ -18,8 +18,8 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       transition={{ delay: index * 0.12 }}
-      whileHover={{ y: -6 }}
-      className="rounded-3xl border border-border bg-white p-6 shadow-soft"
+      whileHover={{ y: -3 }}
+      className="rounded-2xl border border-border bg-card p-6 shadow-soft transition duration-300 hover:shadow-glow"
     >
       <div className="flex flex-wrap items-center gap-3">
         <span
@@ -34,3 +34,4 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
     </motion.article>
   );
 }
+

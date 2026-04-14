@@ -13,8 +13,8 @@ export function FounderCard({ founder, index }: { founder: Founder; index: numbe
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
       transition={{ delay: index * 0.15 }}
-      whileHover={{ y: -6 }}
-      className="group rounded-3xl border border-border bg-white p-4 shadow-soft"
+      whileHover={{ y: -3 }}
+      className="group rounded-2xl border border-border bg-card p-4 shadow-soft"
     >
       <div className="overflow-hidden rounded-[24px] border border-primary/10">
         <Image
@@ -32,3 +32,5 @@ export function FounderCard({ founder, index }: { founder: Founder; index: numbe
     </motion.article>
   );
 }
+
+
